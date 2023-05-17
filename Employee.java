@@ -8,6 +8,7 @@ public class Employee {
 public Employee (String name, int code) {
 	
 	this.name = name;
+	//the security code is used to identify each employee
 	securityCode = code;
 }
 
