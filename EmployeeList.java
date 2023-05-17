@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class EmployeeList {
 	
 	private ArrayList<Employee> Employees;
-	
+// creates a list of employees	
 public EmployeeList() {
 	
 	Employees = new ArrayList<Employee>();
