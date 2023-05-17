@@ -18,7 +18,9 @@ public class Main {
 		 
 		 
 	do {
+	//keeps track of orderNumber
 	orderNum++;
+	//creates new order
 	Order.newOrder();
 	System.out.println("Your order number is: "+ orderNum);
 	System.out.println("\n\nWould you like to start a new order? (yes or no)");
@@ -27,11 +29,11 @@ public class Main {
 	} while (s.equals("yes"));
 
 	
-
+	//after all the orders are done, youre prompted for your ID to see if youre an employee
 	System.out.println("What is your employee ID?");
 	securityCode = console.nextInt();
 	String a;
-	
+	//checks to see if your ID matches an existing employee
 	for( Employee e : employeeList.getList()) {
 		
 		if (securityCode == e.getSecurityCode()) {
@@ -40,7 +42,7 @@ public class Main {
 			System.out.println();
 			System.out.println(orderList);
 			
-			
+			//asks if you want to remove an order and asks what which order you want to remove
 			System.out.println("Would you like to remove an order?");
 			a = console.next();
 			
@@ -51,7 +53,7 @@ public class Main {
 				for (int x = 1; x <= orderList.totalOrders(); x++) {
 					System.out.print(x + " ");
 				}
-				
+				//removes order and updates the total order info
 				System.out.println("\nWhich item would you like to remove?");
 				orderList.removeOrder(console.nextInt());
 				System.out.println("Item removed!\nNew order data is: ");
